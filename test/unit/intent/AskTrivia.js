@@ -8,9 +8,9 @@ const {
   executeFunction,
 } = helpers
 
-describe('LaunchRequest', () => {
+describe('AskTrivia', () => {
   beforeEach(() => {
-    event.request.type = 'LaunchRequest'
+    event.request.type = 'AskTrivia'
   })
   it('Say hallo world', () => {
     const succeed = (data) => {
@@ -22,7 +22,7 @@ describe('LaunchRequest', () => {
         outputSpeech,
         {
           type: 'SSML',
-          ssml: "<speak> 茶道ガイドへようこそ。茶道の小噺や用語についてお尋ねください。 </speak>"
+          ssml: "<speak> 織部焼で有名な古田織部を主人公とした「へうげもの」という漫画がある。 </speak>"
         }
       )
     }

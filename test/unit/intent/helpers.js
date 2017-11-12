@@ -1,19 +1,40 @@
 exports.event = {
-  'session': {
-    'sessionId': 'SessionId.f9e6dcbb-b7da-4b47-905c.etc.etc',
-    'application': {
-      'applicationId': 'amzn1.echo-sdk-ams.app.1234'
+  "session": {
+    "new": true,
+    "sessionId": "amzn1.echo-api.session.[unique-value-here]",
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.[unique-value-here]"
     },
-    'attributes': {},
-    'user': {
-      'userId': 'amzn1.ask.account.VO3PVTGF563MOPBY.etc.etc'
+    "application": {
+      "applicationId": "amzn1.ask.skill.[unique-value-here]"
+    }
+  },
+  "version": "1.0",
+  "request": {
+    "locale": "en-US",
+    "timestamp": "2016-10-27T18:21:44Z",
+    "type": "",
+    "requestId": "amzn1.echo-api.request.[unique-value-here]"
+  },
+  "context": {
+    "AudioPlayer": {
+      "playerActivity": "IDLE"
     },
-    'new': true
-  },
-  'request': {
-    'locale': 'en-US'
-  },
-  'version': '1.0'
+    "System": {
+      "device": {
+        "supportedInterfaces": {
+          "AudioPlayer": {}
+        }
+      },
+      "application": {
+        "applicationId": "amzn1.ask.skill.[unique-value-here]"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.[unique-value-here]"
+      }
+    }
+  }
 }
 
 exports.callback = (error, data)  => {}
