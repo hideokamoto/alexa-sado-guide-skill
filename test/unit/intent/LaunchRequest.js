@@ -1,10 +1,11 @@
+/* global describe, beforeEach, it */
 const assert = require('power-assert')
 const MyLambdaFunction = require('../../../index.js')
 const { handler } = MyLambdaFunction
 const helpers = require('./helpers')
 const {
   event,
-  executeFunction,
+  executeFunction
 } = helpers
 
 describe('LaunchRequest', () => {
@@ -21,7 +22,7 @@ describe('LaunchRequest', () => {
         outputSpeech,
         {
           type: 'SSML',
-          ssml: "<speak> 茶道ガイドへようこそ。茶道の小噺や用語についてお尋ねください。 </speak>"
+          ssml: '<speak> 茶道ガイドへようこそ。茶道の小噺や用語についてお尋ねください。 </speak>'
         }
       )
     }

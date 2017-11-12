@@ -1,10 +1,11 @@
+/* global describe, beforeEach, it */
 const assert = require('power-assert')
 const MyLambdaFunction = require('../../../index.js')
 const { handler } = MyLambdaFunction
 const helpers = require('./helpers')
 const {
   event,
-  executeFunction,
+  executeFunction
 } = helpers
 
 describe('AskTrivia', () => {
@@ -21,7 +22,7 @@ describe('AskTrivia', () => {
         outputSpeech,
         {
           type: 'SSML',
-          ssml: "<speak> 織部焼で有名な古田織部を主人公とした「へうげもの」という漫画がある。 </speak>"
+          ssml: '<speak> 織部焼で有名な古田織部を主人公とした「へうげもの」という漫画がある。 </speak>'
         }
       )
     }
