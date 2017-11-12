@@ -26,7 +26,13 @@ describe('LaunchRequest', () => {
         }
       )
     }
-    const fail = () => assert.ok(false)
+    const fail = (e) => {
+      if (e.name === 'AssertionError') {
+        assert.deepEqual(e.expected, e.actual)
+      } else {
+        assert.ok(false)
+      }
+    }
     executeFunction(event, {succeed, fail}, handler)
   })
 })

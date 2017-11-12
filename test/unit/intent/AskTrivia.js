@@ -18,15 +18,15 @@ describe('AskTrivia', () => {
       const {
         outputSpeech
       } = response
-      assert.deepEqual(
-        outputSpeech,
-        {
-          type: 'SSML',
-          ssml: '<speak> 織部焼で有名な古田織部を主人公とした「へうげもの」という漫画がある。 </speak>'
-        }
-      )
+      assert.equal(outputSpeech.type, 'SSML')
     }
-    const fail = () => assert.ok(false)
+    const fail = (e) => {
+      if (e.name === 'AssertionError') {
+        assert.deepEqual(e.expected, e.actual)
+      } else {
+        assert.ok(false)
+      }
+    }
     executeFunction(event, {succeed, fail}, handler)
   })
 })
