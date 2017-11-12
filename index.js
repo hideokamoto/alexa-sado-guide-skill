@@ -1,11 +1,6 @@
 const Alexa = require('alexa-sdk')
 const SKILL_NAME = 'Kyoto Guide'
-const handlers = {
-  'LaunchRequest': function () {
-    this.response.speak('Hello World!');
-    this.emit(':responseReady');
-  },
-}
+const handlers = require('./lib/handlres')
 
 module.exports.handler = function (event, context, callback) {
   var alexa = Alexa.handler(event, context)

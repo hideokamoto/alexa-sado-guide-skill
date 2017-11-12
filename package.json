@@ -16,6 +16,7 @@
     "alexa-conversation": "^0.2.0",
     "eslint": "^4.11.0",
     "mocha": "^4.0.1",
-    "power-assert": "^1.4.4"
+    "power-assert": "^1.4.4",
+    "sinon": "^4.1.2"
   }
 }

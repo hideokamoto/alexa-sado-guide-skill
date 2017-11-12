@@ -17,3 +17,7 @@ exports.event = {
 }
 
 exports.callback = (error, data)  => {}
+
+exports.executeFunction = (event, assertion, handler) => {
+  handler(event, assertion, (error, data)  => {})
+}
