@@ -1,0 +1,6 @@
+AskFactIntent 茶道の用語を教えて
+AskFactIntent 用語を教えて
+AskFactIntent {factName}について教えて
+
+AskTriviaIntent 小噺を聞かせて
+AskTriviaIntent トリビアを聞かせて
