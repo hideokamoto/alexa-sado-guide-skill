@@ -1,5 +1,4 @@
 const assert = require('power-assert')
-const sinon = require('sinon')
 const MyLambdaFunction = require('../../../index.js')
 const { handler } = MyLambdaFunction
 const helpers = require('./helpers')
