@@ -8,9 +8,9 @@ const {
   executeFunction
 } = helpers
 
-describe('AskTrivia', () => {
+describe('AskTriviaIntent', () => {
   beforeEach(() => {
-    event.request.type = 'AskTrivia'
+    event.request.type = 'AskTriviaIntent'
   })
   it('Say hallo world', () => {
     const succeed = (data) => {

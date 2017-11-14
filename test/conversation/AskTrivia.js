@@ -12,7 +12,7 @@ conversation(opts)
   .userSays('LaunchRequest')
   .plainResponse
   .shouldContain('茶道ガイドへようこそ。茶道の小噺や用語についてお尋ねください。')
-  .userSays('AskFact', {factName: '楽焼'})
+  .userSays('AskTriviaIntent')
   .plainResponse
   .shouldContain(' ')
   .end()
