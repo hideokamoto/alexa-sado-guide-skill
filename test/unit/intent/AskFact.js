@@ -17,7 +17,7 @@ describe('AskFact', () => {
         }
       }
     }
-    const expect = '黒味を帯びた濃緑色の抹茶をさします。濃茶は茶杓に山3杯を1人分として、たっぷりの抹茶に少量の湯を注ぎ、茶筅で練ってつくります。'
+    const expect = '濃茶とは、黒味を帯びた濃緑色の抹茶をさします。濃茶は茶杓に山3杯を1人分として、たっぷりの抹茶に少量の湯を注ぎ、茶筅で練ってつくります。'
     const response = getFacts(param)
     assert.equal(expect, response)
   })

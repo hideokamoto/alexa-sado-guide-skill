@@ -12,7 +12,7 @@ describe('HelpIntent', () => {
   beforeEach(() => {
     event.request.type = 'AMAZON.HelpIntent'
   })
-  it('Say hekp', () => {
+  it('Say help', () => {
     const succeed = (data) => {
       const { response } = data
       const {
@@ -22,7 +22,7 @@ describe('HelpIntent', () => {
         outputSpeech,
         {
           type: 'SSML',
-          ssml: '<speak> このスキルでは、茶道に関する情報を聞くことができます。 </speak>'
+          ssml: '<speak> このスキルでは、茶道に関する情報を聞くことができます。聞きたい情報を仰ってください。 </speak>'
         }
       )
     }
