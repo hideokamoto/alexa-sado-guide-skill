@@ -17,8 +17,10 @@ describe('LaunchRequest', () => {
     const succeed = (data) => {
       const { response } = data
       const {
-        outputSpeech
+        outputSpeech,
+        shouldEndSession
       } = response
+      assert.equal(shouldEndSession, false)
       assert.deepEqual(
         outputSpeech,
         {

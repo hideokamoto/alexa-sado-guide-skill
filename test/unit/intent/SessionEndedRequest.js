@@ -12,8 +12,10 @@ const {
 const succeed = (data) => {
   const { response } = data
   const {
-    outputSpeech
+    outputSpeech,
+    shouldEndSession
   } = response
+  assert.equal(shouldEndSession, true)
   assert.deepEqual(
     outputSpeech,
     {

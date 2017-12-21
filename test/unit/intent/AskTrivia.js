@@ -17,8 +17,10 @@ describe('AskTriviaIntent', () => {
     const succeed = (data) => {
       const { response } = data
       const {
-        outputSpeech
+        outputSpeech,
+        shouldEndSession
       } = response
+      assert.equal(shouldEndSession, true)
       assert.equal(outputSpeech.type, 'SSML')
     }
     executeFunction(event, {succeed, fail}, handler)
