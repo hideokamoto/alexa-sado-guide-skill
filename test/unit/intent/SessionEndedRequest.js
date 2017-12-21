@@ -5,16 +5,10 @@ const { handler } = MyLambdaFunction
 const helpers = require('./helpers')
 const {
   event,
-  executeFunction
+  executeFunction,
+  fail
 } = helpers
 
-const fail = (e) => {
-  if (e.name === 'AssertionError') {
-    assert.deepEqual(e.expected, e.actual)
-  } else {
-    assert.ok(false)
-  }
-}
 const succeed = (data) => {
   const { response } = data
   const {

@@ -5,7 +5,8 @@ const { handler } = MyLambdaFunction
 const helpers = require('./helpers')
 const {
   event,
-  executeFunction
+  executeFunction,
+  fail
 } = helpers
 
 describe('HelpIntent', () => {
@@ -25,13 +26,6 @@ describe('HelpIntent', () => {
           ssml: '<speak> このスキルでは、茶道に関する情報を聞くことができます。聞きたい情報を仰ってください。 </speak>'
         }
       )
-    }
-    const fail = (e) => {
-      if (e.name === 'AssertionError') {
-        assert.deepEqual(e.expected, e.actual)
-      } else {
-        assert.ok(false)
-      }
     }
     executeFunction(event, {succeed, fail}, handler)
   })
