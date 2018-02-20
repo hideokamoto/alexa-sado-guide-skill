@@ -13,6 +13,7 @@
   "dependencies": {
     "alexa-sdk": "^1.0.19",
     "elasticsearch": "^14.1.0",
+    "moment": "^2.20.1",
     "http-aws-es": "^4.0.0"
   },
   "devDependencies": {
@@ -24,7 +25,6 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^4.0.1",
-    "moment": "^2.20.1",
     "power-assert": "^1.4.4"
   }
 }

@@ -7,6 +7,13 @@ provider:
   memorySize: ${self:custom.memorySize.${self:custom.stage}, self:custom.memorySize.default}
   profile: ${opt:profile, self:custom.defaultProfile}
   region: ${opt:region, self:custom.defaultRegion}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "es:ESHttpHead"
+        - "es:ESHttpGet"
+      Resource:
+        - "arn:aws:es:ap-northeast-1:372284591230:*"
 
 custom:
   stage:  ${opt:stage, self:provider.stage}
