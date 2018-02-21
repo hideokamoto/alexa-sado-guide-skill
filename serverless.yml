@@ -12,6 +12,12 @@ provider:
       Action:
         - "es:ESHttpHead"
         - "es:ESHttpGet"
+        - "es:DescribeElasticsearchDomain"
+        - "es:DescribeElasticsearchDomains"
+        - "es:ESHttpPost"
+        - "es:ListTags"
+        - "es:ListDomainNames"
+        - "es:DescribeElasticsearchDomainConfig"
       Resource:
         - "arn:aws:es:ap-northeast-1:372284591230:*"
 
